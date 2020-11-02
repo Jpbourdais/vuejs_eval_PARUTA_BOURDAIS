@@ -11,6 +11,7 @@
                         <div class="media">
                           <div class="media-body text-left ml-3">
                             <img :src="selectedBook.coverUri" :alt="selectedBook.title" />
+                            <div v-if="selectedBook.ebooks">Ebook Disponible</div>
                             <h3 class="mt-0">{{selectedBook.title}}</h3>
                             <h4 class="mt-0">{{selectedBook.author}}</h4>
                             <h4 class="mt-0">{{selectedBook.year}}</h4>
