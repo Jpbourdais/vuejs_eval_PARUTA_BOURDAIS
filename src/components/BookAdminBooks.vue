@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col">
-      <router-link class="btn btn-success" to="/admin/book">Ajouter un nouveau livre</router-link>
+      <router-link class="btn btn-success" to="/admin/book/new">Ajouter un nouveau livre</router-link>
       <table class="table table-dark">
         <thead>
           <tr>

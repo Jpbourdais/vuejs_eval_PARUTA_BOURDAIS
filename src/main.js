@@ -23,7 +23,7 @@ Vue.use(VueRouter)
 // Routes
 const routes = [
   {
-    path: '/', name:'home',
+    path: '/', name:'racine',
     component: () => import('./components/BookBooks.vue')
   },
   {
@@ -51,7 +51,7 @@ const routes = [
       component: () => import('./components/BookAdminBooks.vue')
   },
   {
-      path: '/admin/book', name:'adminBookEdit',
+      path: '/admin/book/:bookId', name:'adminBookEdit',
       component: () => import('./components/BookAdminBookEdit.vue')
   },
   {
