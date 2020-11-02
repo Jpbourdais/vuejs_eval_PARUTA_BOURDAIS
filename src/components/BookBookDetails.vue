@@ -10,11 +10,11 @@
                     <div class="bg-faded rounded p-5">
                         <div class="media">
                           <div class="media-body text-left ml-3">
-                            <img :src="book.coverUri" :alt="book.title" />
+                            <img :src="selectedBook.coverUri" :alt="selectedBook.title" />
                             <h3 class="mt-0">{{selectedBook.title}}</h3>
-                            <h3 class="mt-0">{{selectedBook.author}}</h3>
-                            <h3 class="mt-0">{{selectedBook.year}}</h3>
-                                {{selectedBook.resume}}
+                            <h4 class="mt-0">{{selectedBook.author}}</h4>
+                            <h4 class="mt-0">{{selectedBook.year}}</h4>
+                            <div class="description">{{selectedBook.resume}}</div>
                           </div>
                         </div>
                     </div>
@@ -38,19 +38,19 @@
     props: {
     },
     data:()=>({
-        allBooks: [],
-        selectedBook:{}
+        selectedBook: {}
     }),
     methods:{
-      async fetchAllBooks(){
-        let allBooks = await axios.get(BOOKS_API_ENDPOINT);
-        let { data } = allBooks;
-        this.allBooks = data;
+      async fetchOneBook(bookId){
+        let oneBook = await axios.get(`${BOOKS_API_ENDPOINT}${bookId}`);
+        let { data } = oneBook;
+        this.selectedBook = data;
+        console.log(this.selectedBook)
       },
     },
     async created(){
-      let { bookId }    = this.$route.params;
-      this.selectedBook = this.book.find(book => book.id==bookId);
+      let { bookId } = this.$route.params;
+      this.fetchOneBook(bookId);
     }
   }
 </script>

@@ -10,19 +10,22 @@
         <div class="header__navbar">
           <ul class="list-unstyled">
             <li>
-              <a href="#">
-              <i class="fas fa-book"></i>
-              <span class="bot-line"></span>Livres</a>
+              <router-link class="text-uppercase text-expanded headerlink nav-link" to="/books">
+                <i class="fas fa-book"></i>
+                <span class="bot-line"></span>Livres
+              </router-link>
             </li>
             <li>
-              <a href="#">
-              <i class="fas fa-copy"></i>
-              <span class="bot-line"></span>Genre</a>
+              <router-link class="text-uppercase text-expanded headerlink nav-link" to="/genres">
+                <i class="fas fa-copy"></i>
+                <span class="bot-line"></span>Genre
+              </router-link>
             </li>
             <li>
-              <a href="#">
-              <i class="fas fa-cogs"></i>
-              <span class="bot-line"></span>Admin</a>
+              <router-link class="text-uppercase text-expanded headerlink nav-link" to="/admin">
+                <i class="fas fa-cogs"></i>
+                <span class="bot-line"></span>Admin
+              </router-link>
             </li>
           </ul>
         </div>
