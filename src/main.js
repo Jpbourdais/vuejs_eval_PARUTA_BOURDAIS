@@ -51,11 +51,11 @@ const routes = [
       component: () => import('./components/BookAdminBooks.vue')
   },
   {
-      path: '/admin/book/:bookId', name:'adminBookEdit',
+      path: '/admin/books/:bookId', name:'adminBookEdit',
       component: () => import('./components/BookAdminBookEdit.vue')
   },
   {
-      path: '/admin/genre', name:'adminGenreEdit',
+      path: '/admin/genres/new', name:'adminGenreEdit',
       component: () => import('./components/BookAdminGenreEdit.vue')
   }
 ]
